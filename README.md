@@ -70,21 +70,23 @@
                 hasMagicalPowers: true,
             }
         },
-    }
+    };
     ```
 
-1. Create a variable called forbiddenForestDwellers and set it equal to the dwellers in the forbidden forest using dot notation or bracket notation.
+1. Create a variable called `forbiddenForestDwellers` and set it equal to the dwellers in the forbidden forest using dot notation or bracket notation.
 
-1. Create a variable called snapeFirstSubjectTaught and set it equal to the 0th index of Severus Snape's first subject taught. *Hint* you may need to use bracket notation (I bet you were beginning to wonder it's purpose ;)!
+1. Create a variable called `snapeFirstSubjectTaught` and set it equal to the 0th index of Severus Snape's first subject taught. *Hint* you may need to use bracket notation (I bet you were beginning to wonder it's purpose ;)!
 
 1. Use object assignment to add a new professor to the list. [Here's a list](https://en.wikipedia.org/wiki/Hogwarts_staff#Filius_Flitwick) to help. *Note* you should not be touching the code that you copied above!
 
 1. Add a new property to our object called `magicalObjects` and set it equal to  
     ```
-    'Marauder’s Map': {
-      users: ['Harry Potter', 'Ron Weasley', 'Hermione Granger', 'Tom Riddle'],
-      creators: ['James Potter', 'Sirius Black', 'Remus Lupin', 'Peter Pettigrew'],
+    {
+      'Marauder’s Map': {
+        users: ['Harry Potter', 'Ron Weasley', 'Hermione Granger', 'Tom Riddle'],
+        creators: ['James Potter', 'Sirius Black', 'Remus Lupin', 'Peter Pettigrew'],
+      }
     }
     ```
 
-1. Add an object an [object method](https://www.w3schools.com/js/js_object_methods.asp) to `Marauders Map` called `sayPassword` that console.logs the string "I solemnly swear that I am up to no good". Call your object method to make sure it works!
+1. Add an object an [object method](https://www.w3schools.com/js/js_object_methods.asp) to `Marauders Map` called `sayPassword` that returns the string "I solemnly swear that I am up to no good". Call your object method to make sure it works!
