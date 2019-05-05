@@ -32,7 +32,6 @@
 
 1. Create a variable called `myMostFavoriteNashvilleSpot` and set it equal to the first value of the array `favoriteNashvilleSpots` using dot notation or bracket notation to access the `me` object's value.
 
-## Kick it up a notch
 
 1. Copy paste this HUGE object into your `script.js`: 
     ``` 
