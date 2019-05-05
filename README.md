@@ -89,4 +89,4 @@
     }
     ```
 
-1. Add an object an [object method](https://www.w3schools.com/js/js_object_methods.asp) to `Marauders Map` called `sayPassword` that returns the string "I solemnly swear that I am up to no good". Call your object method to make sure it works!
+1. Add an [object method](https://www.w3schools.com/js/js_object_methods.asp) to `Marauders Map` called `sayPassword` that returns the string "I solemnly swear that I am up to no good". Call your object method to make sure it works!
