@@ -90,3 +90,6 @@
     ```
 
 1. Add an [object method](https://www.w3schools.com/js/js_object_methods.asp) to `Marauders Map` called `sayPassword` that returns the string "I solemnly swear that I am up to no good". Call your object method to make sure it works!
+
+1. Use the [delete operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) to delete `ranking` from the `hogwarts` object.
+
