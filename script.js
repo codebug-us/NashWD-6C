@@ -40,6 +40,13 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
+
+
    
 
 
@@ -1613,11 +1620,10 @@ $(document).ready(function(){
    }
 
    if (typeof me.myAgeInDogYears !== 'undefined') {
-    console.log(me.age / 7)
-    if (me.myAgeInDogYears() === me.age / 7) {
-      console.log("Step 6: Correct");
+    if (me.myAgeInDogYears() === me.age * 7) {
+      console.log("Step 7: Correct");
     } else {
-      console.log("Step 6: Incorrect");   
+      console.log("Step 7: Incorrect");   
     }
    }
    if (typeof myMostFavoriteNashvilleSpot !== 'undefined') {
@@ -1665,58 +1671,63 @@ $(document).ready(function(){
             }
         },
     };
-    if (hogwarts === hogwartsReal) {
-      console.log("Step 9: Correct");
-    } else {
-      console.log("Step 9: Incorrect");   
-    }
-   }
+    if (_.isEqual(hogwarts, hogwartsReal) || Object.keys(hogwarts.professors) > Object.keys(hogwartsReal.professors)) {
+        console.log("Step 9: Correct");
+      } else {
+        console.log("Step 9: Incorrect");   
+      }
+      if (typeof forbiddenForestDwellers !== 'undefined') {
+        if (forbiddenForestDwellers === hogwarts.schoolGrounds.forbiddenForest.dwellers) {
+          console.log("Step 10: Correct");
+        } else {
+          console.log("Step 10: Incorrect");    
+        }
+      }
 
-   if (typeof forbiddenForestDwellers !== 'undefined') {
-    if (forbiddenForestDwellers === hogwarts.schoolGrounds.forbiddenForest.dwellers) {
-      console.log("Step 10: Correct");
-    } else {
-      console.log("Step 10: Incorrect");    
-    }
-   }
+      if (typeof snapeFirstSubjectTaught !== 'undefined') {
+        if (snapeFirstSubjectTaught === hogwarts.professors['Severus Snape'].subjectsTaught[0]) {
+          console.log("Step 11: Correct");
+        } else {
+          console.log("Step 11: Incorrect");    
+        }
+      }
 
-   if (typeof snapeFirstSubjectTaught !== 'undefined') {
-    if (snapeFirstSubjectTaught === hogwarts.professors['Severus Snape'].subjectsTaught[0]) {
-      console.log("Step 11: Correct");
-    } else {
-      console.log("Step 11: Incorrect");    
-    }
-   }
-
-   if (typeof hogwarts.professors !== 'undefined' && Object.keys(hogwarts.professors).length !== 3) {
-    if (Object.keys(hogwarts.professors).length > 3) {
-      console.log("Step 12: Correct");
-    } else {
-      console.log("Step 12: Incorrect");    
-    }
-   }
+      if (typeof hogwarts.professors !== 'undefined' && Object.keys(hogwarts.professors).length !== 3) {
+        if (Object.keys(hogwarts.professors).length > 3) {
+          console.log("Step 12: Correct");
+        } else {
+          console.log("Step 12: Incorrect");    
+        }
+      }
 
 
-   if (typeof hogwarts.magicalObjects !== 'undefined') {
-    var realMapCode = {
-      'Marauder’s Map': {
-        users: ['Harry Potter', 'Ron Weasley', 'Hermione Granger', 'Tom Riddle'],
-        creators: ['James Potter', 'Sirius Black', 'Remus Lupin', 'Peter Pettigrew'],
-      }    
-    }
-    if (_.isEqual(hogwarts.magicalObjects, realMapCode) || (hogwarts.magicalObjects['Marauder’s Map'] && hogwarts.magicalObjects['Marauder’s Map'].sayPassword)) {
-      console.log("Step 13: Correct");
-    } else {
-      console.log("Step 13: Incorrect");    
-    }
-   }
-   if (typeof hogwarts.magicalObjects['Marauder’s Map'].sayPassword !== 'undefined') {
-    var returnString = "I solemnly swear that I am up to no good";
-    if (hogwarts.magicalObjects['Marauder’s Map'].sayPassword() === returnString){
-      console.log("Step 14: Correct");
-    } else {
-      console.log("Step 14: Incorrect");    
-    }
-   }
+      if (typeof hogwarts.magicalObjects !== 'undefined') {
+        var realMapCode = {
+          'Marauder’s Map': {
+            users: ['Harry Potter', 'Ron Weasley', 'Hermione Granger', 'Tom Riddle'],
+            creators: ['James Potter', 'Sirius Black', 'Remus Lupin', 'Peter Pettigrew'],
+          }    
+        }
+        if (_.isEqual(hogwarts.magicalObjects, realMapCode) || (hogwarts.magicalObjects['Marauder’s Map'] && hogwarts.magicalObjects['Marauder’s Map'].sayPassword)) {
+            console.log("Step 13: Correct");
+        } else {
+            console.log("Step 13: Incorrect");    
+        }
+        if (typeof hogwarts.magicalObjects['Marauder’s Map'].sayPassword !== 'undefined') {
+          var returnString = "I solemnly swear that I am up to no good";
+          if (hogwarts.magicalObjects['Marauder’s Map'].sayPassword() === returnString){
+            console.log("Step 14: Correct");
+            if (hogwarts.ranking === undefined) {
+                console.log("Step 15: Correct");
+            } else {
+                console.log("Step 15: Incorrect");    
+            }
+          } else {
+            console.log("Step 14: Incorrect");    
+          }
+        }
+      }
+
+  }
   
 });

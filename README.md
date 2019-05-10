@@ -77,7 +77,7 @@
 
 1. Create a variable called `snapeFirstSubjectTaught` and set it equal to the 0th index of Severus Snape's first subject taught. *Hint* you may need to use bracket notation (I bet you were beginning to wonder it's purpose ;)!
 
-1. Use object assignment to add a new professor to the list. [Here's a list](https://en.wikipedia.org/wiki/Hogwarts_staff#Filius_Flitwick) to help. *Note* you should not be touching the code that you copied above!
+1. Use object assignment to add a new professor to the list. [Here's a list](https://en.wikipedia.org/wiki/Hogwarts_staff#The_staff_and_their_positions) to help. *Note* you should not be touching the code that you copied above!
 
 1. Add a new property to our object called `magicalObjects` and set it equal to  
     ```
