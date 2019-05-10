@@ -28,7 +28,7 @@
 
 1. JavaScript objects can also have values that are functions. These are called object methods. Check out this [object method](https://www.w3schools.com/js/js_object_methods.asp) called `fullName` and add a `fullName` object method to your object. 
 
-1. Create another [object method](https://www.w3schools.com/js/js_object_methods.asp) called `myAgeInDogYears` and set it equal to the value of your age divided by 7.
+1. Create another [object method](https://www.w3schools.com/js/js_object_methods.asp) called `myAgeInDogYears` and set it equal to the value of your age multiplied by 7.
 
 1. Create a variable called `myMostFavoriteNashvilleSpot` and set it equal to the first value of the array `favoriteNashvilleSpots` using dot notation or bracket notation to access the `me` object's value.
 
