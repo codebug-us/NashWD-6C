@@ -1,23 +1,83 @@
 $(document).ready(function(){
   // Your code goes below
+  var me={
+    firstName:"Alex",
+    lastName:"Miller",
+    age:21,
+    favoriteColor:"Blue",
+    hasPet:false,
+    // fullName:this.firstName+" "+this.lastName,
+    fullName:function(){
+      return this.firstName+" "+this.lastName;
+    },
+    myAgeInDogYears:function(){
+      return this.age*7;
+    }
+
+  };
+
+  var myFavoriteColor=me.favoriteColor;
+  me.favoriteNashvilleSpots=["12 South","Vandy","Broadway"];
+  var myMostFavoriteNashvilleSpot=me.favoriteNashvilleSpots[0];
+
+  var hogwarts = {
+    name: 'Hogwarts School of Witchcraft And Wizardry',
+    ranking: 38,
+    founded: 'c. 9th/10th century',
+    owner: "Ministry of Magic",
+    location: "Scotland",
+    houses: ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'],
+    professors: {
+        'Minerva McGonagall': {
+            subjectsTaught: ['Transfiguration'],
+            house: 'Gryffindor'
+        },
+        'Filius Flitwick': {
+            subjectsTaught: ['Charms'],
+            house: 'Ravenclaw'
+        },
+        'Severus Snape': {
+            subjectsTaught: ['Defence Against the Dark Arts', 'Potions'],
+            house: 'Slytherin'
+        }
+    },
+    schoolGrounds: {
+        forbiddenForest: {
+            keeper: 'Hagrid',
+            openToStudents: false,
+            dwellers: ['spiders', 'dragons', 'hippogriff'],
+            hasMagicalPowers: true,
+        },
+        roomOfRequirement: {
+            keeper: 'Filch',
+            openToStudents: true,
+            dwellers: ["Dumbledore's Army", "Draco Malfoy", "Dobby"],
+            hasMagicalPowers: true,
+        }
+    },
+};
+
+var forbiddenForestDwellers=hogwarts.schoolGrounds.forbiddenForest.dwellers;
+var snapeFirstSubjectTaught=hogwarts.professors['Severus Snape'].subjectsTaught[0];
+hogwarts.professors[3]="Albus Dumbledore";
 
 
+hogwarts.magicalObjects={
+  'Marauder’s Map': {
+    users: ['Harry Potter', 'Ron Weasley', 'Hermione Granger', 'Tom Riddle'],
+    creators: ['James Potter', 'Sirius Black', 'Remus Lupin', 'Peter Pettigrew'],
+  }
+}
 
 
+hogwarts.magicalObjects["Marauder’s Map"].sayPassword=function(){
+  return "I solemnly swear that I am up to no good";
+}
 
+console.log(hogwarts.magicalObjects["Marauder’s Map"].sayPassword());
 
-
-
-
-
-
-
-
-
-
-
-
-
+//delete ranking
+delete hogwarts.ranking;
 
 
 
